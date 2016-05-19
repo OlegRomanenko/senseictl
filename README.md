@@ -31,7 +31,6 @@ Usage
 --
 
     usage: senseictl [-h] [--commit] [--reset] [--profile PROFILE]
-<<<<<<< HEAD
                      [--led-style STYLE] [--led-intensity INTENSITY] [--cpi1 CPI]
                      [--cpi2 CPI] [--polling-rate RATE]
 
