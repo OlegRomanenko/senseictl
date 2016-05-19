@@ -1,24 +1,24 @@
 from setuptools import setup, find_packages
 setup(
 
-    name = "rivalctl",
+    name = "senseictl",
     version = "0.1",
     packages = find_packages(),
 
     entry_points = {
         'console_scripts': [
-            'rivalctl = rival.rivalctl:main'
+            'senseictl = sensei.senseictl:main'
         ]
     },
 
     # metadata for upload to PyPI
-    author = "Andre P. LeBlanc",
-    author_email = "andrepleblanc@gmail.com",
-    description = "A tool to configure the SteelSeries Rival Gaming Mouse",
+    author = "Demetrio Menezes Neto",
+    author_email = "neto.demetrio@gmail.com",
+    description = "A tool to configure the SteelSeries Sensei Raw Gaming Mouse",
 
     license = "GPL2",
-    keywords = "steelseries rival",
-    url = "https://github.com/andrepl/rivalctl/",
+    keywords = "steelseries sensei",
+    url = "https://github.com/dneto/senseictl",
 
     install_requires=[
         'ioctl-opt>=1.2',

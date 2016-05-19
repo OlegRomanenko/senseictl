@@ -1,7 +1,7 @@
-RivalCTL
+SenseiCTL
 --
 
-**RivalCTL** is an unofficial configuration tool for the SteelSeries Rival Gaming Mouse under linux. This peripheral nor any other product made by SteelSeries, has official Linux support. The tool is limited in it's functionality, since everything had to be reverse-engineered.
+**SenseiCTL** is an unofficial configuration tool for the SteelSeries Sensei Raw Gaming Mouse under linux and is based on [**RivalCTL**](https://github.com/nixi-awoo/rivalctl). This peripheral nor any other product made by SteelSeries, has official Linux support today. The tool is limited in it's functionality, since everything had to be reverse-engineered.
 
 
 Installation
@@ -23,17 +23,14 @@ Requirements:
 
 Manual Installation:
 
-    git clone https://github.com/nixi-awoo/rivalctl.git
+    git clone https://github.com/dneto/senseictl.git
     sudo python setup.py install
-    
-AUR Package (for Arch Linux):
 
-[rivalctl-git](https://aur.archlinux.org/packages/rivalctl-git/)
-
+ 
 Usage
 --
 
-    usage: rivalctl [-h] [--commit] [--reset] [--wheel-color COLOR]
+    usage: senseictl [-h] [--commit] [--reset] [--wheel-color COLOR]
                     [--wheel-style STYLE] [--logo-color COLOR]
                     [--logo-style STYLE] [--cpi1 CPI] [--cpi2 CPI]
                     [--profile PROFILE] [--polling-rate RATE]
