@@ -32,6 +32,8 @@ def _main(args):
         reports.append(device.set_logo_color(args.logo_color))
     if args.led_style is not None:
         reports.append(device.set_led_style(args.led_style))
+    if args.led_intensity is not None:
+        reports.append(device.set_led_intensity(args.led_intensity))
     if args.cpi1 is not None:
         reports.append(device.set_cpi_1(args.cpi1))
     if args.cpi2 is not None:
@@ -49,6 +51,7 @@ parser.add_argument("--commit", help="Save to firmware", action="store_true", de
 parser.add_argument("--reset", help="Reset all options to FACTORY defaults", action="store_true", default=False)
 parser.add_argument("--profile", type=str, metavar="PROFILE", help="profile name or path to file")
 parser.add_argument("--led-style", type=int, metavar="STYLE", help="LED Style [1=Steady, 2-4=Breathe Speed, 5=On Click]", choices=LedStyles.values())
+parser.add_argument("--led-intensity", type=int, metavar="INTENSITY", help="LED Intensity [1=Off, 2=Low, 3=Medium, 4=High]", choices=LedStyles.values())
 parser.add_argument("--cpi1", type=int, metavar="CPI", help="50-6500 in increments of 50 [default 800]")
 parser.add_argument("--cpi2", type=int, metavar="CPI", help="50-6500 in increments of 50 [default 1600]")
 parser.add_argument("--polling-rate", type=int, metavar="RATE", help="1000, 500, 250, or 125 [default=1000]", choices=[1000,500,250,125])

@@ -25,6 +25,9 @@ class LedStyles(enum.Enum):
     def values(cls):
         return list(map(lambda k: k.value, LedStyles))
 
+class LedIntensity(enum.Enum):
+    OFF, LOW, MEDIUM, HIGH = (1, 2 ,3 ,4)
+
 #
 # Auxiliary functions
 
@@ -90,8 +93,22 @@ class SenseiRaw(object):
         raise ValueError(
                 "Invalid Style %s, valid values are 1, 2, 3, 4 and 5" % (style,))
 
+    def _set_led_intensity(self, led, intensity):
+        if led != LED_LOGO:
+            raise ValueError("Invalid LED: %s" % (led,))
+        if LedIntensity(intensity) in LedIntensity:
+            return '\x05%s%s' % (chr(led), chr(intensity))
+        raise ValueError(
+                "Invalid Style %s, valid values are 1, 2, 3, 4 and 5" % (style,))
+
+
+
+
     def set_led_style(self, style):
         return self._set_led_style(LED_LOGO, style)
+
+    def set_led_intensity(self, intensity):
+        return self._set_led_intensity(LED_LOGO, intensity)
 
     def set_cpi(self, cpinum, value):
         if cpinum not in (1,2):
