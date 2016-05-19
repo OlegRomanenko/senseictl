@@ -31,11 +31,11 @@ Usage
 --
 
     usage: senseictl [-h] [--commit] [--reset] [--profile PROFILE]
+<<<<<<< HEAD
                      [--led-style STYLE] [--led-intensity INTENSITY] [--cpi1 CPI]
                      [--cpi2 CPI] [--polling-rate RATE]
 
     A tool to configure the SteelSeries RAW Gaming Mouse
-
     optional arguments:
       -h, --help            show this help message and exit
       --commit              Save to firmware
